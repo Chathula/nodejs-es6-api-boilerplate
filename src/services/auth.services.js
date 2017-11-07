@@ -16,7 +16,7 @@ const localStrategy = new LocalStrategy(localOpts, async (email, password, done)
 
     if (!user) {
       return done(null, false);
-    } else if (!user._comparePassword(password)) {
+    } else if (await user._comparePassword(password) === false) {
       return done(null, false);
     }
 
