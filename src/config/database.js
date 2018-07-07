@@ -8,12 +8,10 @@ mongoose.Promise = global.Promise;
 
 try {
   mongoose.connect(constants.MONGO_URL, {
-    useMongoClient: true
+    useNewUrlParser: true 
   });
 } catch (err) {
-  mongoose.createConnection(constants.MONGO_URL, {
-    useMongoClient: true
-  });
+  mongoose.createConnection(constants.MONGO_URL);
 }
 
 mongoose.connection
