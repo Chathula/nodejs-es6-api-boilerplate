@@ -1,14 +1,16 @@
 const devConfig = {
-  MONGO_URL: 'mongodb://localhost/express-es6-dev',
+  MONGO_URL: 'mongodb://localhost:27017/express-es6-dev',
   JWT_SECRET: 'thisisasecret'
 };
 
 const testConfig = {
-  MONGO_URL: 'mongodb://localhost/express-es6-test'
+  MONGO_URL: 'mongodb://localhost:27017/express-es6-test',
+  JWT_SECRET: 'thisisasecretoftest'
 };
 
 const prodConfig = {
-  MONGO_URL: 'mongodb://localhost/express-es6-prod'
+  MONGO_URL: 'mongodb://localhost:27017/express-es6-prod',
+  JWT_SECRET: 'thisisasecretofprod'
 };
 
 const defaultConfig = {
