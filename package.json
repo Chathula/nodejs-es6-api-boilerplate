@@ -12,7 +12,9 @@
   "scripts": {
     "clean": "rimraf dist",
     "dev:build": "yarn run clean && webpack -w",
-    "dev": "cross-env NODE_ENV=development nodemon dist/index.bundle.js"
+    "build": "webpack",
+    "dev": "cross-env NODE_ENV=development nodemon dist/index.bundle.js",
+    "start": "NODE_ENV=production npm run build && NODE_ENV=production node dist/index.bundle.js"
   },
   "dependencies": {
     "bcrypt-nodejs": "^0.0.3",
